@@ -3,15 +3,14 @@
 include "matrix.class.php";
 
 $arr1= [
-        [1, 2, 3],
-		[4, 10, 6],
-		[7, 8, 9], 
-		
+        [5, 2, 3],
+		[4, 10, 6],		
+	    [7, 8, 9]
 	   ];
 		
 $arr2= [
-        [4, 1, 3],
-		[2, 5, 2],
+        [5, 2, 1],
+		[2, 5, 3],
 		[7, 4, 3]
 	
 	   ];
@@ -21,21 +20,9 @@ $sum= $matCls->sumMat($arr1, $arr2);
 
 echo"sum"."</br>"."</br>";
 // برای نمایش
- $rows = count($sum);
- $columns = count($sum[0]);
- 
- for ($i = 0; $i < $rows; $i++)
- {
-	for ($j = 0; $j < $columns; $j++) 
-	{
+echo $matCls->showMat($sum);
 
-		echo $sum[$i][$j] ." &nbsp; " ;
-	}
-	echo "<br/>";
- }
- 
-
- echo"<hr>";
+ echo"</br>"."<hr>";
 //-----------------------------------------------------
 
  
@@ -46,16 +33,8 @@ $diff= $matCls->diffMat($arr1, $arr2);
 
 // برای نمایش
 
- for ($i = 0; $i < $rows; $i++)
- {
-	for ($j = 0; $j < $columns; $j++) 
-	{
-
-		echo $diff[$i][$j] ." &nbsp; " ;
-	}
-	echo "<br/>";
- }
- echo"<hr>";
+echo $matCls->showMat($diff);
+ echo"</br>"."<hr>";
  //-----------------------------------------------------
 
  
@@ -66,17 +45,9 @@ $zarb= $matCls->zarbMat($arr1, $arr2);
 
 // برای نمایش
 
- for ($i = 0; $i < $rows; $i++)
- {
-	for ($j = 0; $j < $columns; $j++) 
-	{
-
-		echo $zarb[$i][$j] ." &nbsp; " ;
-	}
-	echo "<br/>";
- }
+echo $matCls->showMat($zarb);
  
- echo"<hr>";
+ echo"</br>"."<hr>";
  //---------------------------------------------------
  
    echo"taghsim"."</br>"."</br>";
@@ -86,19 +57,9 @@ $taghsim= $matCls->taghsimMat($arr1, $arr2);
 
 // برای نمایش
 
- for ($i = 0; $i < $rows; $i++)
- {
-	for ($j = 0; $j < $columns; $j++) 
-	{
-
-		echo $taghsim[$i][$j] ." &nbsp; " ;
-	}
-	echo "<br/>";
- }
+echo $matCls->showMat($taghsim);
  
- echo "<hr>";
- 
-
+ echo"</br>"."<hr>";
  
   //====================================================================
   echo"shift-left";
@@ -107,23 +68,9 @@ $taghsim= $matCls->taghsimMat($arr1, $arr2);
  $left= $matCls->shiftLeft($arr1);
 
  
-  $rows = count($arr1);
-  $columns = count($arr1[0]);
- 
- for ($i = 0; $i < $rows; $i++)
- {
-	for ($j = 0; $j < $columns; $j++) 
-	{
+echo $matCls->showMat($left);
 
-		echo $left[$i][$j] ." &nbsp; " ;
-	}
-	echo "<br/>";
- }
- 
- echo"</br>";
- echo "<hr>";
-
-
+ echo"</br>"."<hr>";
  
  //-------------------------------------------------
  
@@ -133,21 +80,9 @@ $taghsim= $matCls->taghsimMat($arr1, $arr2);
  $right= $matCls->shiftRight($arr1);
 
  
-  $rows = count($arr1);
-  $columns = count($arr1[0]);
+echo $matCls->showMat($right);
  
- for ($i = 0; $i < $rows; $i++)
- {
-	for ($j = 0; $j < $columns; $j++) 
-	{
-
-		echo $right[$i][$j] ." &nbsp; " ;
-	}
-	echo "<br/>";
- }
- 
- echo"</br>";
- echo "<hr>";
+ echo"</br>"."<hr>";
  
  //---------------------------------------------
  
@@ -157,21 +92,9 @@ $taghsim= $matCls->taghsimMat($arr1, $arr2);
  $top= $matCls->shiftTop($arr1);
 
  
-  $rows = count($arr1);
-  $columns = count($arr1[0]);
+ echo $matCls->showMat($top);
  
- for ($i = 0; $i < $rows; $i++)
- {
-	for ($j = 0; $j < $columns; $j++) 
-	{
-
-		echo $top[$i][$j] ." &nbsp; " ;
-	}
-	echo "<br/>";
- }
- 
- echo"</br>";
- echo "<hr>";
+ echo"</br>"."<hr>";
  //------------------------------------------------
 
   echo"shift-down";
@@ -180,31 +103,39 @@ $taghsim= $matCls->taghsimMat($arr1, $arr2);
  $down= $matCls->shiftDown($arr1);
 
  
-  $rows = count($arr1);
-  $columns = count($arr1[0]);
+echo $matCls->showMat($down);
  
- for ($i = 0; $i < $rows; $i++)
- {
-	for ($j = 0; $j < $columns; $j++) 
-	{
-
-		echo $down[$i][$j] ." &nbsp; " ;
-	}
-	echo "<br/>";
- }
- 
- echo"</br>";
- echo "<hr>";
-
+ echo"</br>"."<hr>";
  
  //=============================================================================
  //ترانهاده
  
-   echo"tranahadeh";
+  echo"tranahadeh";
+  echo"</br>"."</br>";
+  $tranahadeh= $matCls->tranahadeh($arr1);
+  $rows = count($arr1);
+  $columns = count($arr1[0]);
+ for ($i = 0; $i < $rows; $i++)
+ {
+	for ($j = 0; $j < $columns; $j++) 
+	{
+		echo $tranahadeh[$i][$j] ." &nbsp; " ;
+	}
+	echo "<br/>";
+ }
+ echo"</br>"."<hr>";
+
+ //----------------------------------------------------------
+ //دترمینان
+ 
+   echo"determinan";
   echo"</br>"."</br>";
  
- $tranahadeh= $matCls->tranahadeh($arr1);
-
+     if($rows==3)echo $determinan= $matCls->determinan3($arr1);
+else
+	 if($rows==2)echo $determinan= $matCls->determinan2($arr1);
+else
+	 if($rows==1)echo $determinan= $matCls->determinan1($arr1);
  
   $rows = count($arr1);
   $columns = count($arr1[0]);
@@ -219,23 +150,7 @@ $taghsim= $matCls->taghsimMat($arr1, $arr2);
 	echo "<br/>";
  }
  
- echo"</br>";
- echo "<hr>";
- //----------------------------------------------------------
- //دترمینان
- 
-   echo"determinan";
-  echo"</br>"."</br>";
- 
-     if($rows==3)echo $determinan= $matCls->determinan3($arr1);
-else
-	 if($rows==2)echo $determinan= $matCls->determinan2($arr1);
-else
-	 if($rows==1)echo $determinan= $matCls->determinan1($arr1);
-
-
- echo"</br>";
- echo "<hr>";
+ echo"</br>"."<hr>";
  
  //----------------------------------------------------------
  //معکوس
@@ -244,47 +159,9 @@ else
  
  $inverse= $matCls->inverse($arr1);
 
+echo $matCls->showMat($inverse);
  
-  $rows = count($arr1);
-  $columns = count($arr1[0]);
- 
- for ($i = 0; $i < $rows; $i++)
- {
-	for ($j = 0; $j < $columns; $j++) 
-	{
-
-		echo $inverse[$i][$j] ." &nbsp; " ;
-	}
-	echo "<br/>";
- }
- 
- echo"</br>";
- echo "<hr>";
- 
+ echo"</br>"."<hr>";
   
- //=========================================================================
- //اینو اصلاح کن
- /*
-   echo"move-left";
-  echo"</br>"."</br>";
- 
- $moveL= $matCls->flipHorizantal($arr1);
 
- 
-  $rows = count($arr1);
-  $columns = count($arr1[0]);
- 
- for ($i = 0; $i < $rows; $i++)
- {
-	for ($j = 0; $j < $columns; $j++) 
-	{
-
-		echo $moveL[$i][$j] ." &nbsp; " ;
-	}
-	echo "<br/>";
- }
- 
- echo"</br>";
- echo "<hr>";
- */
  
