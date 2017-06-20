@@ -24,49 +24,33 @@ echo $matCls->showMat($sum);
 
  echo"</br>"."<hr>";
 //-----------------------------------------------------
-
- 
  echo"different"."</br>"."</br>";
 
 $diff= $matCls->diffMat($arr1, $arr2);
 
-
-// برای نمایش
-
 echo $matCls->showMat($diff);
  echo"</br>"."<hr>";
  //-----------------------------------------------------
-
- 
   echo"zarb"."</br>"."</br>";
 
 $zarb= $matCls->zarbMat($arr1, $arr2);
-
-
-// برای نمایش
 
 echo $matCls->showMat($zarb);
  
  echo"</br>"."<hr>";
  //---------------------------------------------------
- 
    echo"taghsim"."</br>"."</br>";
 
 $taghsim= $matCls->taghsimMat($arr1, $arr2);
-
-
-// برای نمایش
 
 echo $matCls->showMat($taghsim);
  
  echo"</br>"."<hr>";
  
   //====================================================================
-  echo"shift-left";
-  echo"</br>"."</br>";
+  echo"shift-left"."</br>"."</br>";
  
  $left= $matCls->shiftLeft($arr1);
-
  
 echo $matCls->showMat($left);
 
@@ -74,11 +58,9 @@ echo $matCls->showMat($left);
  
  //-------------------------------------------------
  
-  echo"shift-right";
-  echo"</br>"."</br>";
- 
- $right= $matCls->shiftRight($arr1);
+  echo"shift-right"."</br>"."</br>";
 
+ $right= $matCls->shiftRight($arr1);
  
 echo $matCls->showMat($right);
  
@@ -86,22 +68,18 @@ echo $matCls->showMat($right);
  
  //---------------------------------------------
  
-  echo"shift-top";
-  echo"</br>"."</br>";
+  echo"shift-top"."</br>"."</br>";
  
  $top= $matCls->shiftTop($arr1);
-
  
  echo $matCls->showMat($top);
  
  echo"</br>"."<hr>";
  //------------------------------------------------
 
-  echo"shift-down";
-  echo"</br>"."</br>";
- 
- $down= $matCls->shiftDown($arr1);
+  echo"shift-down"."</br>"."</br>";
 
+ $down= $matCls->shiftDown($arr1);
  
 echo $matCls->showMat($down);
  
@@ -128,9 +106,8 @@ echo $matCls->showMat($down);
  //----------------------------------------------------------
  //دترمینان
  
-   echo"determinan";
-  echo"</br>"."</br>";
- 
+   echo"determinan"."</br>"."</br>";
+   
      if($rows==3)echo $determinan= $matCls->determinan3($arr1);
 else
 	 if($rows==2)echo $determinan= $matCls->determinan2($arr1);
@@ -148,20 +125,15 @@ else
 		echo $tranahadeh[$i][$j] ." &nbsp; " ;
 	}
 	echo "<br/>";
- }
- 
+ } 
  echo"</br>"."<hr>";
  
  //----------------------------------------------------------
  //معکوس
-   echo"reverse";
-  echo"</br>"."</br>";
- 
+   echo"reverse"."</br>"."</br>";
+
  $inverse= $matCls->inverse($arr1);
 
 echo $matCls->showMat($inverse);
  
  echo"</br>"."<hr>";
-  
-
- 
